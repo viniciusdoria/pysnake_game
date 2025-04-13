@@ -1,0 +1,59 @@
+{
+    // Editor
+    "editor.wordWrap": "off",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.rulers": [
+        {
+            "column": 109,
+            "color": "#303030"
+        },
+        119 // Use default color
+    ],
+    "editor.renderWhitespace": "all",
+    "editor.acceptSuggestionOnEnter": "on",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "editor.action.inlineSuggest.commit": "enter",
+    // Terminal
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "path": "cmd.exe"
+        }
+    },
+    "files.associations": {
+        ".git-blame-ignore-revs": "ini",
+        "metadata.txt": "ini",
+        "*.pth": "python"
+    },
+    "git.branchProtection": [
+        "main"
+    ],
+    "gitlens.advanced.blame.customArguments": [
+        "-w",
+        "--ignore-revs-file",
+        ".git-blame-ignore-revs"
+    ],
+    "python.languageServer": "Pylance",
+    // "python.languageServer": "Jedi",
+    // Formatting with black and isort
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always",
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    // Json configs
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.formatOnSave": true
+    },
+    // Testing with pytest
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+}
