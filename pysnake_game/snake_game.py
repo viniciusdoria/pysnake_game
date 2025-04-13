@@ -3,7 +3,7 @@ Snake Game using PySDL2.
 
 This module implements a simple Snake game using the PySDL2 library.
 The snake moves around the window, eating apples to grow in size.
-The game ends if the snake collides with the window boundaries or 
+The game ends if the snake collides with the window boundaries or
 with itself.
 """
 
@@ -219,9 +219,11 @@ def log_record(record, snake_size):
     """
 
     if snake_size > record:
+        record_dir = os.path.join(os.path.dirname(__file__), "resources")
         record = snake_size
         data = {"record": record}
-        with open("resources/data.json", "w") as file:
+        os.makedirs(record_dir, exist_ok=True)
+        with open(os.path.join(record_dir, "data.json"), "w", encoding="utf-8") as file:
             json.dump(data, file)
     return record
 
